@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  sidekiq_web:
+    image: 'sidekiq_web'
+    container_name: 'sidekiq_web'
+    env_file:
+      - .env
+
+    build: .
+
+    ports:
+      - 3030:3030
